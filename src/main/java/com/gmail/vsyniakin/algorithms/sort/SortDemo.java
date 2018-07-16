@@ -2,10 +2,13 @@ package com.gmail.vsyniakin.algorithms.sort;
 
 import java.util.Arrays;
 
+import com.gmail.vsyniakin.algorithms.CreateRandomArray;
+
 public class SortDemo {
 
 	public static void main(String[] args) {
-		int [] array = new int[] {2, 7, 3, 1, 4, 7, 3, 6, 2};
+		int [] array = CreateRandomArray.getArrayNumbers(20, 1, 100);
+		System.out.println(Arrays.toString(array));
 		
 		// Merge sort:
 		
@@ -19,7 +22,12 @@ public class SortDemo {
 		
 		// Counting sort:
 		
-		System.out.println(Arrays.toString(CountingSort.counting(array, 7)));
+//		System.out.println(Arrays.toString(CountingSort.counting(array, 110)));
+		
+		// Redix sort:
+		
+		System.out.println(Arrays.toString(RedixSort.sort(array)));
+
 	}
 
 }
